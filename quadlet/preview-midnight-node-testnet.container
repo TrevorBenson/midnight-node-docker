@@ -1,0 +1,20 @@
+[Unit]
+Description=Midnight Node Testnet Container
+Wants=network-online.target
+After=network-online.target preview-pool.service preview-db-sync.service preview-kupo.service
+
+[Container]
+ContainerName=preview-midnight-node-testnet
+EnvironmentFile=/opt/cardano/preview/.env
+Exec=--chain=/res/testnet/testnetRaw.json --bootnodes /dns/boot-node-01.testnet.midnight.network/tcp/30333/ws/p2p/12D3KooWMjUq13USCvQR9Y6yFzYNYgTQBLNAcmc8psAuPx2UUdnB  --bootnodes /dns/boot-node-02.testnet.midnight.network/tcp/30333/ws/p2p/12D3KooWR1cHBUWPCqk3uqhwZqUFekfWj8T7ozK6S18DUT745v4d  --bootnodes /dns/boot-node-03.testnet.midnight.network/tcp/30333/ws/p2p/12D3KooWQxxUgq7ndPfAaCFNbAxtcKYxrAzTxDfRGNktF75SxdX5  --no-private-ip  --validator
+HealthCmd=curl -f http://localhost:9933/health
+HealthInterval=2s
+Image=preview-midnight-node.image
+Pod=preview.pod
+Volume=preview-midnight-data-testnet.volume:/data:rw,z
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
