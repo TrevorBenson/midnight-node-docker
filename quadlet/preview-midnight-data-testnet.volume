@@ -1,0 +1,6 @@
+[Unit]
+Description=Midnight Testnet Data Volume for Preview environment
+
+[Volume]
+Label=app=preview-midnight-node
+VolumeName=preview-midnight-data-testnet
