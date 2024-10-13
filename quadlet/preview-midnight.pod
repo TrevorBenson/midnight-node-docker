@@ -1,5 +1,5 @@
 [Unit]
-Description=Midnight Container Pod
+Description=Midnight Testnet Pod for Preview Network
 Wants=network-online.target
 After=network-online.target
 
