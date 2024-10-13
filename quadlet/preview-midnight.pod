@@ -6,12 +6,5 @@ After=network-online.target
 [Pod]
 Network=preview.network
 PodName=preview-midnight
-PublishPort=23002:23002
-PublishPort=[::]:23002:23002
-PublishPort=32798:12798
-PublishPort=29092:29092
-PublishPort=5432:5432
-PublishPort=1442:1442
-PublishPort=1337:1337
 PublishPort=9944:9944
 PublishPort=30333:30333
