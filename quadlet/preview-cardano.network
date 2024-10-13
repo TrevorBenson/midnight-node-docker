@@ -4,6 +4,6 @@ Wants=network-online.target
 After=network-online.target
 
 [Network]
-NetworkName=cardano-preview
+NetworkName=preview-cardano
 IPv6=true
 DNS=8.8.8.8
