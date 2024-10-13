@@ -10,7 +10,7 @@ Exec=--chain=/res/testnet/testnetRaw.json --bootnodes /dns/boot-node-01.testnet.
 HealthCmd=curl -f http://localhost:9933/health
 HealthInterval=2s
 Image=preview-midnight-node.image
-Pod=preview.pod
+Pod=preview-midnight.pod
 Volume=preview-midnight-data-testnet.volume:/data:rw,z
 
 [Service]
