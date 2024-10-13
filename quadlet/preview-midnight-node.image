@@ -1,0 +1,5 @@
+[Unit]
+Description=Midnight Node Image for Testnet
+
+[Image]
+Image=docker.io/midnightnetwork/midnight-node:0.6.3-69581601
